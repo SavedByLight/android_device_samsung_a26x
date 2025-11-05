@@ -1,3 +1,4 @@
+
 # Android fstab file.
 #<src>                  <mnt_point>         <type>    <mnt_flags and options>                               <fs_mgr_flags>
 # The filesystem that contains the filesystem checker binary (typically /system) cannot
@@ -12,7 +13,6 @@ system_dlkm	/system_dlkm	ext4	ro	wait,avb,logical,first_stage_mount
 vendor_dlkm	/vendor_dlkm	erofs	ro	wait,avb,logical,first_stage_mount
 product	/product	erofs	ro	wait,avb,logical,first_stage_mount
 odm	/odm	erofs	ro	wait,avb,logical,first_stage_mount
-
 /dev/block/by-name/boot		/boot               emmc      defaults                                              first_stage_mount,formattable,avb=boot
 /dev/block/by-name/init_boot /init_boot          emmc      defaults                                              first_stage_mount,formattable,avb=init_boot
 /dev/block/by-name/vendor_boot	/vendor_boot      emmc      defaults                                              first_stage_mount,formattable,avb=vendor_boot
@@ -29,11 +29,10 @@ odm	/odm	erofs	ro	wait,avb,logical,first_stage_mount
 /dev/block/by-name/cache	/cache	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic	wait,formattable,check
 /dev/block/by-name/keystorage /keystorage        emmc      defaults                                              first_stage_mount
 /dev/block/by-name/harx      /harx               emmc      defaults                                              first_stage_mount
-
 #CSC
 /dev/block/by-name/prism        /prism                  ext4    ro,barrier=1    nofail,avb,first_stage_mount
 /dev/block/by-name/optics       /optics                 ext4    ro,barrier=1    nofail,avb,first_stage_mount
 
 # VOLD
 #/devices/platform/13200000.usb*                auto    vfat    default    voldmanaged=usb:auto
-#/devices/platform/100e0000.dwmmc2/mmc_host*    auto    auto    default    voldmanaged=sdcard:auto	/init_boot	emmc	default	recoveryonly
+#/devices/platform/100e0000.dwmmc2/mmc_host*    auto    auto    default    voldmanaged=sdcard:auto
