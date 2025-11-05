@@ -1,27 +1,3 @@
-# mount point	fstype		device	device2					flags
-# Logical f2fs partitions
-system		/system		f2fs						wait,logical,first_stage_mount
-system_dlkm	/system_dlkm	f2fs					wait,logical,first_stage_mount
-
-# Logical ext4 partitions
-system		/system		ext4						wait,logical,first_stage_mount
-system_dlkm	/system_dlkm	ext4					wait,logical,first_stage_mount
-
-# Logical erofs partitions
-system		/system		erofs						wait,logical,first_stage_mount
-system_dlkm	/system_dlkm	erofs					wait,logical,first_stage_mount
-vendor		/vendor		erofs						wait,logical,first_stage_mount
-vendor_dlmm	/vendor_dlkm	erofs					wait,logical,first_stage_mount
-product		/product	erofs						wait,logical,first_stage_mount
-odm		/odm		erofs						wait,logical,first_stage_mount
-
-# Symlinked partitions
-/system_image	emmc		/dev/block/mapper/system		flags=backup=0;flashimg;display="System Image"
-/system_dlkm_image	emmc	/dev/block/mapper/system_dlkm	flags=backup=0;flashimg;display="System_dlkm Image"
-/vendor_image	emmc		/dev/block/mapper/vendor		flags=backup=0;flashimg;display="Vendor Image"
-/vendor_dlkm_image	emmc	/dev/block/mapper/vendor_dlkm	flags=backup=0;flashimg;display="Vendor_dlkm Image"
-/product_image	emmc		/dev/block/mapper/product		flags=backup=0;flashimg;display="Product Image"
-/odm_image	emmc		/dev/block/mapper/odm		flags=backup=0;flashimg;display="Odm Image"
 
 # Physical partitions
 /metadata	ext4		/dev/block/bootdevice/by-name/metadata		flags=backup=1;wipeingui;display="Metadata"
