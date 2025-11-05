@@ -2,12 +2,10 @@
 # Logical f2fs partitions
 system		/system		f2fs						wait,logical,first_stage_mount
 system_dlkm	/system_dlkm	f2fs					wait,logical,first_stage_mount
-vendor_dlmm	/vendor_dlkm	f2fs					wait,logical,first_stage_mount
 
 # Logical ext4 partitions
 system		/system		ext4						wait,logical,first_stage_mount
 system_dlkm	/system_dlkm	ext4					wait,logical,first_stage_mount
-vendor_dlmm	/vendor_dlkm	ext4					wait,logical,first_stage_mount
 
 # Logical erofs partitions
 system		/system		erofs						wait,logical,first_stage_mount
