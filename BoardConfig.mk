@@ -63,10 +63,8 @@ BOARD_KERNEL_PAGESIZE := 4096
 # mkbootimg
 BOARD_MKBOOTIMG_ARGS:= \
 --board=SRPXK14A004 \
---dtb_offset=0x00000000 \
 --kernel_offset=0x00008000 \
 --ramdisk_offset=0x00000000 \
---tags_offset=0x00000000 \
 --header_version=$(BOARD_BOOTIMG_HEADER_VERSION) \
 --dtb=$(TARGET_PREBUILT_DTB)
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
